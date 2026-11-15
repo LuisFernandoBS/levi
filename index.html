@@ -30,7 +30,7 @@ header.top h2{font-size:22px}
 .hero{background:linear-gradient(145deg,#123B56,#1A7482);color:#fff;border-radius:28px;padding:22px;position:relative;overflow:hidden;margin-bottom:18px;min-height:250px}
 .hero h1{font-size:32px;max-width:11ch;margin:6px 0 10px}
 .pill{display:inline-block;background:#ffffff22;border-radius:999px;padding:5px 12px;font-size:12px}
-.hero .turtle{position:absolute;right:-6px;bottom:-4px;width:190px;animation:swim 5s ease-in-out infinite}
+.hero .octopus{position:absolute;right:-6px;bottom:-12px;width:190px;height:220px;object-fit:contain;animation:swim 5s ease-in-out infinite}
 @keyframes swim{50%{transform:translate(-8px,-8px) rotate(-2deg)}}
 .bar{height:7px;border-radius:9px;background:#ffffff33;overflow:hidden}.bar.d{background:#E1F0F0}
 .bar b{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--tq),var(--ag));width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
@@ -64,6 +64,7 @@ label{font-size:12px;font-weight:700;color:var(--mut)}
 .bl{background:linear-gradient(145deg,#123B56,#1A7482);color:#fff}
 nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom));width:min(528px,calc(100% - 24px));background:#ffffffee;backdrop-filter:blur(14px);border-radius:24px;box-shadow:0 8px 30px rgba(18,59,86,.18);display:flex;padding:6px;z-index:10}
 nav button{flex:1;padding:8px 2px;border-radius:18px;font-size:10px;font-weight:700;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:2px;transition:background .2s}nav button span{font-size:19px}
+nav button .home-icon{width:26px;height:26px;object-fit:contain}
 nav button.on{background:#DDF3F0;color:var(--tq)}
 .chat{display:flex;flex-direction:column;gap:10px;min-height:46vh}
 .msg{max-width:86%;padding:11px 14px;border-radius:18px;background:#fff;box-shadow:var(--sh);align-self:flex-start;white-space:pre-wrap}.msg.u{align-self:flex-end;background:var(--deep);color:#fff}
@@ -127,13 +128,13 @@ function modal(h){const m=document.createElement('div');m.className='mask';m.inn
 const closeM=()=>document.querySelector('.mask')?.remove();
 const emptyS=(t,s)=>`<div class="empty">${TURTLE}<b style="display:block;color:var(--ink)">${t}</b>${s}</div>`;
 /* ---------- Telas ---------- */
-const TABS=[['home','Início','🏠'],['plan','Planejamento','📋'],['budget','Orçamento','👛'],['guests','Convidados','👥'],['ai','Levi AI','✨']];
+const TABS=[['home','Início','<img class="home-icon" src="/icons/octopus-home.png" alt="">'],['plan','Planejamento','📋'],['budget','Orçamento','👛'],['guests','Convidados','👥'],['ai','Levi AI','✨']];
 function nav(){$('#nav').innerHTML=TABS.map(t=>`<button class="${S.tab===t[0]?'on':''}" onclick="go('${t[0]}')" ${S.tab===t[0]?'aria-current="page"':''}><span>${t[2]}</span>${t[1]}</button>`).join('')}
 function go(t){S.tab=t;save();render();scrollTo({top:0})}
 function render(){nav();$('#ttl').textContent=TABS.find(t=>t[0]===S.tab)[1];$('#v').innerHTML=({home:home,plan:plan,budget:budget,guests:guests,ai:ai})[S.tab]();countUp();bars();if(S.tab==='ai')scrollTo({top:document.body.scrollHeight})}
 function home(){const s=stats(),days=Math.max(0,Math.ceil((new Date(S.party+'T12:00')-Date.now())/864e5)),dt=new Date(S.party+'T12:00').toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric'});
 const save_=Math.round(S.items.filter(i=>i.cat==='Decoração').reduce((a,i)=>a+i.price,0)*.12);
-return`<div class="hero"><span class="pill">📅 ${dt}</span><p style="margin-top:14px;opacity:.85">Olá, mamãe!</p><h1>Vamos preparar o grande dia?</h1><p>Faltam <b>${days} dias</b> para mergulhar nessa aventura.</p><div class="bar" style="width:55%;margin:12px 0 4px"><b data-w="${s.pct}"></b></div><small>${s.pct}% organizado</small><div class="turtle">${TURTLE}</div></div>
+return`<div class="hero"><span class="pill">📅 ${dt}</span><p style="margin-top:14px;opacity:.85">Olá, mamãe!</p><h1>Vamos preparar o grande dia?</h1><p>Faltam <b>${days} dias</b> para mergulhar nessa aventura.</p><div class="bar" style="width:55%;margin:12px 0 4px"><b data-w="${s.pct}"></b></div><small>${s.pct}% organizado</small><img class="octopus" src="/icons/octopus-home.png" alt="Polvo azul segurando uma casinha"></div>
 <div class="sec">VISÃO GERAL</div><h2 style="margin-bottom:12px">Seu planejamento</h2><div class="grid">
 <div class="card"><div class="ic" style="background:#DDF3F0">👛</div><div class="sm">Orçamento</div><div class="n" data-n="${S.budget}" data-m="r"></div><div class="sm">${R(s.plan)} planejados</div><div class="bar d" style="margin-top:8px"><b data-w="${Math.min(100,s.plan/S.budget*100)}"></b></div></div>
 <div class="card"><div class="ic" style="background:#FDE5E1">🛒</div><div class="sm">Itens comprados</div><div class="n"><span data-n="${s.done}"></span> <span class="sm">/ ${s.n}</span></div><div class="sm">${s.n-s.done} ainda pendentes</div></div>
