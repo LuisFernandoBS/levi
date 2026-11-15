@@ -14,7 +14,7 @@ function hasRequiredConfig() {
   return Boolean(
     process.env.SUPABASE_URL
     && process.env.SUPABASE_SERVICE_ROLE_KEY
-    && process.env.LEVI_SHARED_PASSWORD?.length >= 16
+    && process.env.LEVI_SHARED_PASSWORD?.length >= 8
     && process.env.LEVI_SESSION_SECRET?.length >= 32
   );
 }
@@ -84,7 +84,7 @@ export default async function handler(req, res) {
     res.setHeader('Allow', 'GET, POST, PUT');
     return json(res, 405, { error: 'Método não permitido.' });
   }
-  if (!hasRequiredConfig()) return json(res, 503, { error: 'Configure as variáveis do Supabase, uma senha compartilhada com pelo menos 16 caracteres e um segredo de sessão com pelo menos 32 caracteres no Vercel.' });
+  if (!hasRequiredConfig()) return json(res, 503, { error: 'Configure as variáveis do Supabase, uma senha compartilhada com pelo menos 8 caracteres e um segredo de sessão com pelo menos 32 caracteres no Vercel.' });
   if (req.method !== 'GET' && !originIsSame(req)) return json(res, 403, { error: 'Origem da solicitação não permitida.' });
 
   if (req.method === 'POST') {
