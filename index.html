@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Levi Baby Shower</title>
+<meta name="theme-color" content="#123B56">
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--deep:#123B56;--tq:#42BFC1;--pa:#A8DFE8;--ag:#B5E5D6;--sand:#F4E8D0;--co:#F3A69B;--lv:#C9BDEB;--ink:#123B56;--mut:#5E7F8E;--bg:#EEF8F8;--card:#fff;--ln:#D8ECEE;--r:22px;--sh:0 6px 20px rgba(18,59,86,.08)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%}
+body{font:14px/1.45 'DM Sans',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#E6F6F6,#F3FAF9 40%,#EAF6F3);-webkit-tap-highlight-color:transparent}
+h1,h2,h3,.h{font-family:'Baloo 2','DM Sans',sans-serif;line-height:1.1}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--tq);outline-offset:2px}
+#bub{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+#bub i{position:absolute;bottom:-30px;border-radius:50%;border:1.5px solid rgba(66,191,193,.45);background:radial-gradient(circle at 30% 30%,#fff9,#A8DFE822);animation:up linear infinite}
+@keyframes up{to{transform:translateY(-110vh) translateX(20px)}}
+#app{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:0 16px 110px}
+header.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:calc(12px + env(safe-area-inset-top)) 0 10px;background:linear-gradient(#EAF7F7 70%,#EAF7F700)}
+header.top h2{font-size:22px}
+.av{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,#F9C9C0,var(--co));display:grid;place-items:center;font-weight:700}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);padding:16px;margin-bottom:14px}
+.hero{background:linear-gradient(145deg,#123B56,#1A7482);color:#fff;border-radius:28px;padding:22px;position:relative;overflow:hidden;margin-bottom:18px;min-height:250px}
+.hero h1{font-size:32px;max-width:11ch;margin:6px 0 10px}
+.pill{display:inline-block;background:#ffffff22;border-radius:999px;padding:5px 12px;font-size:12px}
+.hero .turtle{position:absolute;right:-6px;bottom:-4px;width:190px;animation:swim 5s ease-in-out infinite}
+@keyframes swim{50%{transform:translate(-8px,-8px) rotate(-2deg)}}
+.bar{height:7px;border-radius:9px;background:#ffffff33;overflow:hidden}.bar.d{background:#E1F0F0}
+.bar b{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--tq),var(--ag));width:0;transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.grid .card{margin:0;padding:14px}
+.ic{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;margin-bottom:8px}
+.n{font:800 22px 'Baloo 2';letter-spacing:-.3px}.sm{font-size:12px;color:var(--mut)}
+.sec{font:700 11px 'DM Sans';color:var(--tq);margin:18px 0 2px;letter-spacing:.06em}
+.row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--ln)}.row:last-child{border:0}
+.row>div:nth-child(2){flex:1;min-width:0}.row b{display:block}
+.chk{width:24px;height:24px;border-radius:50%;border:2px solid var(--ln);display:grid;place-items:center;flex:none;color:#fff;font-size:13px}.chk.on{background:var(--tq);border-color:var(--tq)}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--ln);margin:6px 0 14px}
+.tabs button{flex:1;padding:10px 4px;color:var(--mut);font-weight:700;border-bottom:3px solid transparent}.tabs .on{color:var(--deep);border-color:var(--tq)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;scrollbar-width:none}
+.chip{white-space:nowrap;padding:7px 14px;border-radius:999px;background:#fff;border:1px solid var(--ln);color:var(--mut);font-weight:500}.chip.on{background:var(--ag);color:var(--deep);border-color:var(--ag)}
+.btn{background:var(--deep);color:#fff;border-radius:16px;padding:12px 18px;font-weight:700;transition:transform .15s,box-shadow .15s}
+.btn:active{transform:scale(.96)}.btn:hover{box-shadow:0 6px 16px rgba(18,59,86,.25)}.btn.s{background:#E8F3F3;color:var(--deep)}
+.fab{width:46px;height:46px;border-radius:15px;background:var(--deep);color:#fff;font-size:24px}
+.inp{width:100%;padding:12px 14px;border-radius:14px;border:1.5px solid var(--ln);background:#fff;margin:5px 0 12px}.inp:focus{border-color:var(--tq);outline:0}
+label{font-size:12px;font-weight:700;color:var(--mut)}
+.srch{display:flex;gap:8px;margin-bottom:10px}.srch .inp{margin:0;flex:1}
+.badge{font-size:11px;font-weight:700;border-radius:8px;padding:3px 9px;background:#E3F5F2;color:#1F8F8A}.badge.r{background:#FDE5E1;color:#C4574A}.badge.y{background:#FBF0D3;color:#A07A1E}.badge.l{background:#EDE8FA;color:#6B56B0}
+.dt{width:46px;height:46px;border-radius:13px;background:#FDE5E1;color:#C4574A;text-align:center;font:800 17px/1 'Baloo 2';padding-top:6px;flex:none}.dt small{display:block;font:700 9px 'DM Sans'}
+.tip{display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#DDF3EE,#E8E5F8)}
+.rec{padding:0;overflow:hidden}.rec .top{height:84px;background:linear-gradient(135deg,var(--ag),#DFF3EF);display:grid;place-items:center;font-size:38px;position:relative}
+.rec .top span{position:absolute;left:12px;top:12px;font-size:11px;font-weight:700;background:#fff;border-radius:8px;padding:3px 9px}
+.rec .bd{padding:14px 16px}.ings{display:grid;grid-template-rows:0fr;transition:grid-template-rows .35s}.ings.open{grid-template-rows:1fr}.ings>div{overflow:hidden}
+.tl{position:relative;padding-left:34px}.tl div{position:relative;padding-bottom:18px}.tl div:before{content:'✓';position:absolute;left:-34px;top:0;width:24px;height:24px;border-radius:50%;background:var(--tq);color:#fff;display:grid;place-items:center;font-size:12px}.tl div.w:before{content:'';background:#fff;border:2px solid var(--ln)}
+.tl div:after{content:'';position:absolute;left:-22px;top:24px;bottom:0;width:2px;background:var(--tq)}.tl div:last-child:after{display:none}.tl div.w:after{background:var(--ln)}
+.donut{width:96px;height:96px;flex:none}.donut circle{fill:none;stroke-width:11;transition:stroke-dasharray 1.2s cubic-bezier(.2,.8,.2,1)}
+.bl{background:linear-gradient(145deg,#123B56,#1A7482);color:#fff}
+nav{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(10px + env(safe-area-inset-bottom));width:min(528px,calc(100% - 24px));background:#ffffffee;backdrop-filter:blur(14px);border-radius:24px;box-shadow:0 8px 30px rgba(18,59,86,.18);display:flex;padding:6px;z-index:10}
+nav button{flex:1;padding:8px 2px;border-radius:18px;font-size:10px;font-weight:700;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:2px;transition:background .2s}nav button span{font-size:19px}
+nav button.on{background:#DDF3F0;color:var(--tq)}
+.chat{display:flex;flex-direction:column;gap:10px;min-height:46vh}
+.msg{max-width:86%;padding:11px 14px;border-radius:18px;background:#fff;box-shadow:var(--sh);align-self:flex-start;white-space:pre-wrap}.msg.u{align-self:flex-end;background:var(--deep);color:#fff}
+.ac{background:#EDE8FA;border-radius:16px;padding:12px;align-self:flex-start;max-width:92%}
+.cbar{position:sticky;bottom:92px;display:flex;gap:8px;background:#EAF7F7;padding:8px 0}.cbar .inp{margin:0;flex:1}
+.mask{position:fixed;inset:0;background:#123B5688;backdrop-filter:blur(3px);z-index:20;display:grid;align-items:end;animation:fd .2s}
+.sheet{background:#fff;border-radius:28px 28px 0 0;padding:20px;max-width:560px;width:100%;margin:0 auto;max-height:92vh;overflow:auto;animation:sl .3s cubic-bezier(.2,.8,.2,1)}
+@keyframes fd{from{opacity:0}}@keyframes sl{from{transform:translateY(60px);opacity:0}}
+#toast{position:fixed;top:calc(14px + env(safe-area-inset-top));left:50%;transform:translate(-50%,-90px);background:var(--deep);color:#fff;padding:11px 18px;border-radius:16px;z-index:40;transition:transform .35s;box-shadow:var(--sh)}#toast.show{transform:translate(-50%,0)}
+.cf{position:fixed;width:9px;height:9px;border-radius:50%;z-index:50;pointer-events:none;animation:cf 1.1s ease-out forwards}
+@keyframes cf{to{transform:translate(var(--x),var(--y));opacity:0}}
+#splash{position:fixed;inset:0;z-index:100;background:linear-gradient(180deg,#42BFC1,#1A7482 50%,#123B56);display:grid;place-content:center;text-align:center;color:#fff;transition:opacity .6s .1s}
+#splash.out{opacity:0;pointer-events:none}#splash svg{width:230px;margin:auto;animation:swim 4s ease-in-out infinite}#splash h1{font-size:68px;margin-top:6px}
+.empty{text-align:center;padding:26px 10px;color:var(--mut)}.empty svg{width:120px}
+.sk{height:60px;border-radius:16px;background:linear-gradient(90deg,#E3F1F1,#F4FAFA,#E3F1F1);background-size:200% 100%;animation:sk 1.2s infinite;margin-bottom:10px}@keyframes sk{to{background-position:-200% 0}}
+@media(min-width:900px){#app{max-width:880px;padding-left:230px}nav{left:16px;top:16px;bottom:16px;transform:none;width:200px;flex-direction:column;justify-content:flex-start;gap:4px;padding:14px 10px}nav button{flex:none;flex-direction:row;font-size:14px;gap:12px;padding:12px 14px}.cbar{bottom:0}.grid{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#bub{display:none}}
+</style>
+</head>
+<body>
+<div id="bub" aria-hidden="true"></div>
+<div id="splash"><div id="spt"></div><h1 class="h">Levi</h1><p>Uma aventura está chegando...</p></div>
+<div id="app"><header class="top"><h2 id="ttl">Início</h2><div style="display:flex;gap:8px;align-items:center"><button class="av" style="background:#fff" aria-label="Notificações" onclick="toast('Sem alertas novos 🌊')">🔔</button><div class="av">M</div></div></header><main id="v"></main></div>
+<nav id="nav" aria-label="Navegação principal"></nav>
+<div id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s);
+const R=n=>'R$ '+Number(n||0).toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,9);
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+/* ---------- Personagens (SVG) ---------- */
+const TURTLE=`<svg viewBox="0 0 200 140" aria-label="Tartaruga Levi"><ellipse cx="100" cy="128" rx="64" ry="7" fill="#12384f1a"/><ellipse cx="62" cy="108" rx="16" ry="9" fill="#7FD6C9" stroke="#123B56" stroke-width="4"/><ellipse cx="126" cy="108" rx="16" ry="9" fill="#7FD6C9" stroke="#123B56" stroke-width="4"/><path d="M26 98c0-40 30-66 66-66s62 26 62 66z" fill="#B5E5D6" stroke="#123B56" stroke-width="5"/><path d="M92 34v62M60 52l32 20 32-20M46 90l46-18 46 18" fill="none" stroke="#42BFC1" stroke-width="4" stroke-linejoin="round"/><path d="M92 46l22 14-8 24H78l-8-24z" fill="#42BFC1" opacity=".55"/><ellipse cx="156" cy="74" rx="30" ry="27" fill="#7FD6C9" stroke="#123B56" stroke-width="5"/><circle cx="162" cy="68" r="10" fill="#fff" stroke="#123B56" stroke-width="3"/><circle cx="164" cy="68" r="5.5" fill="#123B56"/><circle cx="166" cy="66" r="2" fill="#fff"/><ellipse cx="146" cy="84" rx="6" ry="4" fill="#F3A69B"/><path d="M158 88q8 6 16-2" fill="none" stroke="#123B56" stroke-width="3.5" stroke-linecap="round"/></svg>`;
+const OCTO=`<svg viewBox="0 0 100 100" aria-label="Polvinho Levi AI"><path d="M18 70c-8 10 2 20 10 12M36 78c-4 14 8 16 12 4M64 82c4 12 16 8 12-4M82 70c8 10-2 20-10 12" fill="none" stroke="#9C8AD6" stroke-width="9" stroke-linecap="round"/><path d="M50 8c-22 0-34 18-34 38 0 18 10 34 34 34s34-16 34-34C84 26 72 8 50 8z" fill="#B9A9EA" stroke="#7B68C2" stroke-width="3"/><ellipse cx="40" cy="42" rx="8" ry="9.5" fill="#fff"/><ellipse cx="62" cy="42" rx="8" ry="9.5" fill="#fff"/><circle cx="41" cy="43" r="5" fill="#123B56"/><circle cx="63" cy="43" r="5" fill="#123B56"/><circle cx="42.5" cy="41" r="1.8" fill="#fff"/><circle cx="64.5" cy="41" r="1.8" fill="#fff"/><ellipse cx="29" cy="55" rx="5" ry="3.2" fill="#F3A69B"/><ellipse cx="73" cy="55" rx="5" ry="3.2" fill="#F3A69B"/><path d="M45 56q6 5 12 0" fill="none" stroke="#123B56" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+/* ---------- Estado (dados fictícios iniciais) ---------- */
+const day=n=>{const d=new Date();d.setDate(d.getDate()+n);return d.toISOString().slice(0,10)};
+const seed=()=>({v:1,budget:5000,party:day(42),tab:'home',sub:'compras',cat:'Todos',q:'',
+items:[['Arco de balões','Decoração',1,'Unidade',680,'orcado'],['100 copos descartáveis','Estrutura',100,'Unidade',48,'comprado'],['Bolo tema fundo do mar','Alimentação',1,'Unidade',420,'orcado'],['Lembrancinhas concha','Decoração',50,'Unidade',285,'comprado'],['Painel de fundo do mar','Decoração',1,'Unidade',350,'pesquisando'],['Fotógrafo','Serviços',1,'Serviço',600,'orcado'],['Mesas e cadeiras','Estrutura',1,'Kit',350,'comprado'],['Refrigerantes','Alimentação',24,'Unidade',160,'pesquisando']].map(a=>({id:uid(),name:a[0],cat:a[1],qty:a[2],unit:a[3],price:a[4],status:a[5]})),
+recipes:[{n:'Bolo de chocolate',tag:'Preparar em casa',yield:'24 porções',e:'🎂',ing:[['Farinha de trigo','2 kg',14],['Açúcar refinado','1 kg',6.5],['Ovos','12 un.',24],['Chocolate em pó','500 g',32],['Leite','2 litros',12],['Fermento','1 un.',4]]},{n:'Brigadeiro de conchinha',tag:'Docinhos',yield:'100 unidades',e:'🍫',ing:[['Leite condensado','10 latas',72],['Chocolate em pó','400 g',18],['Manteiga','200 g',2.8]]},{n:'Sanduíche natural',tag:'Salgados',yield:'50 unidades',e:'🥪',ing:[['Pão de forma','10 pcts',65],['Frango desfiado','3 kg',60],['Requeijão','4 un.',20.2]]}],
+deliv:[{n:'Lembrancinhas concha',s:'Ateliê Mar de Afeto',st:3,eta:day(1),frete:38},{n:'Topos de bolo personalizados',s:'Papelaria Fundo do Mar',st:1,eta:day(-3),frete:22},{n:'Painel de fundo do mar',s:'Loja Oceano',st:0,eta:day(9),frete:66}],
+tasks:[{id:'a',t:'Fechar decoração',d:2,done:false},{id:'b',t:'Entrega das lembrancinhas',d:1,done:false},{id:'c',t:'Confirmar fotógrafo',d:0,done:true}],
+guests:[['Marina e Paulo','Família Oliveira',2,'c'],['Ana Beatriz','Amigos da mamãe',0,'p'],['João e Camila','Família Souza',1,'c'],['Rafaela Martins','Trabalho',0,'p'],['Tio Carlos','Família Oliveira',3,'n'],['Dona Lúcia','Vizinhos',1,'c']].map(a=>({id:uid(),name:a[0],group:a[1],comp:a[2],st:a[3],phone:''})),
+chat:[{r:'a',t:'Oi! Eu sou a Levi AI. Posso ajudar a planejar cada detalhe dessa aventura submarina. Por onde começamos?'}]});
+let S;try{S=JSON.parse(localStorage.getItem('levi')||'null')}catch{}if(!S||S.v!==1)S=seed();
+const save=()=>{try{localStorage.setItem('levi',JSON.stringify(S))}catch{}};
+const paidSt=['comprado','entregue'];
+const STN={naopesq:'Não pesquisado',pesquisando:'Pesquisando preços',orcado:'Orçado',aguardando:'Aguardando compra',comprado:'Comprado',entregue:'Entregue',cancelado:'Cancelado'};
+const CATS=['Alimentação','Decoração','Serviços','Estrutura','Outros'],UNITS=['Unidade','Pacote','Caixa','Kg','Gramas','Litro','Mililitro','Metro','Dúzia','Cento','Fardo','Kit','Serviço'];
+const CI={Alimentação:'🍰',Decoração:'🎈',Serviços:'📸',Estrutura:'🪑',Outros:'🐚'};
+const recCost=r=>r.ing.reduce((s,i)=>s+i[2],0);
+const stats=()=>{const it=S.items.filter(i=>i.status!=='cancelado'),plan=it.reduce((s,i)=>s+(+i.price||0),0),paid=it.filter(i=>paidSt.includes(i.status)).reduce((s,i)=>s+(+i.price||0),0);
+const rc=S.recipes.reduce((s,r)=>s+recCost(r),0),fr=S.deliv.reduce((s,d)=>s+d.frete,0),done=it.filter(i=>paidSt.includes(i.status)).length;
+const conf=S.guests.filter(g=>g.st==='c').reduce((s,g)=>s+1+ +g.comp,0),tot=S.guests.reduce((s,g)=>s+1+ +g.comp,0);
+return{plan:plan+rc,paid,rc,fr,done,n:it.length,conf,tot,pend:S.guests.filter(g=>g.st==='p').reduce((s,g)=>s+1+ +g.comp,0),no:S.guests.filter(g=>g.st==='n').reduce((s,g)=>s+1+ +g.comp,0),pct:it.length?Math.round(done/it.length*100):0}};
+/* ---------- UI helpers ---------- */
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200)}
+function confetti(){if(reduce)return;const cs=['#42BFC1','#F3A69B','#A8DFE8','#C9BDEB','#F4E8D0'];for(let i=0;i<26;i++){const e=document.createElement('i');e.className='cf';e.style.cssText=`left:50%;top:60%;background:${cs[i%5]};--x:${(Math.random()-.5)*320}px;--y:${-60-Math.random()*260}px`;document.body.appendChild(e);setTimeout(()=>e.remove(),1200)}}
+function countUp(){document.querySelectorAll('[data-n]').forEach(el=>{const to=+el.dataset.n,m=el.dataset.m==='r';if(reduce){el.textContent=m?R(to):to;return}const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/900),v=to*(1-Math.pow(1-p,3));el.textContent=m?R(v):Math.round(v);if(p<1)requestAnimationFrame(f)})(t0)})}
+function bars(){requestAnimationFrame(()=>document.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%'))}
+function modal(h){const m=document.createElement('div');m.className='mask';m.innerHTML=`<div class="sheet" role="dialog" aria-modal="true">${h}</div>`;m.onclick=e=>{if(e.target===m)m.remove()};document.body.appendChild(m);const f=m.querySelector('input,textarea');f&&f.focus();return m}
+const closeM=()=>document.querySelector('.mask')?.remove();
+const emptyS=(t,s)=>`<div class="empty">${TURTLE}<b style="display:block;color:var(--ink)">${t}</b>${s}</div>`;
+/* ---------- Telas ---------- */
+const TABS=[['home','Início','🏠'],['plan','Planejamento','📋'],['budget','Orçamento','👛'],['guests','Convidados','👥'],['ai','Levi AI','✨']];
+function nav(){$('#nav').innerHTML=TABS.map(t=>`<button class="${S.tab===t[0]?'on':''}" onclick="go('${t[0]}')" ${S.tab===t[0]?'aria-current="page"':''}><span>${t[2]}</span>${t[1]}</button>`).join('')}
+function go(t){S.tab=t;save();render();scrollTo({top:0})}
+function render(){nav();$('#ttl').textContent=TABS.find(t=>t[0]===S.tab)[1];$('#v').innerHTML=({home:home,plan:plan,budget:budget,guests:guests,ai:ai})[S.tab]();countUp();bars();if(S.tab==='ai')scrollTo({top:document.body.scrollHeight})}
+function home(){const s=stats(),days=Math.max(0,Math.ceil((new Date(S.party+'T12:00')-Date.now())/864e5)),dt=new Date(S.party+'T12:00').toLocaleDateString('pt-BR',{day:'numeric',month:'long',year:'numeric'});
+const save_=Math.round(S.items.filter(i=>i.cat==='Decoração').reduce((a,i)=>a+i.price,0)*.12);
+return`<div class="hero"><span class="pill">📅 ${dt}</span><p style="margin-top:14px;opacity:.85">Olá, mamãe!</p><h1>Vamos preparar o grande dia?</h1><p>Faltam <b>${days} dias</b> para mergulhar nessa aventura.</p><div class="bar" style="width:55%;margin:12px 0 4px"><b data-w="${s.pct}"></b></div><small>${s.pct}% organizado</small><div class="turtle">${TURTLE}</div></div>
+<div class="sec">VISÃO GERAL</div><h2 style="margin-bottom:12px">Seu planejamento</h2><div class="grid">
+<div class="card"><div class="ic" style="background:#DDF3F0">👛</div><div class="sm">Orçamento</div><div class="n" data-n="${S.budget}" data-m="r"></div><div class="sm">${R(s.plan)} planejados</div><div class="bar d" style="margin-top:8px"><b data-w="${Math.min(100,s.plan/S.budget*100)}"></b></div></div>
+<div class="card"><div class="ic" style="background:#FDE5E1">🛒</div><div class="sm">Itens comprados</div><div class="n"><span data-n="${s.done}"></span> <span class="sm">/ ${s.n}</span></div><div class="sm">${s.n-s.done} ainda pendentes</div></div>
+<div class="card"><div class="ic" style="background:#EDE8FA">👥</div><div class="sm">Confirmados</div><div class="n"><span data-n="${s.conf}"></span> <span class="sm">/ ${s.tot}</span></div><div class="sm">${S.guests.filter(g=>g.st==='c').length} convites confirmados</div></div>
+<div class="card"><div class="ic" style="background:#FBF0D3">🚚</div><div class="sm">Entregas</div><div class="n" data-n="${S.deliv.length}"></div><div class="sm">${S.deliv.filter(d=>d.st<4).length} a caminho</div></div></div>
+<h2 style="margin:18px 0 10px">Atalhos rápidos</h2><div class="grid" style="grid-template-columns:1fr 1fr">
+${[['＋','Adicionar item','newItem()'],['👥','Novo convidado','newGuest()'],['👛','Registrar gasto',"go('budget')"],['✨','Conversar com Levi AI',"go('ai')"]].map(a=>`<button class="card" style="display:flex;gap:10px;align-items:center;font-weight:700;text-align:left;${a[0]==='✨'?'background:#EDE8FA':''}" onclick="${a[2]}"><span class="ic" style="background:#DDF3F0;margin:0;flex:none">${a[0]}</span>${a[1]}</button>`).join('')}</div>
+<div class="card"><div class="sec" style="margin:0">FIQUE DE OLHO</div><h2 style="margin-bottom:6px">Próximos passos</h2>${S.tasks.map(t=>`<div class="row" onclick="tTask('${t.id}')" style="cursor:pointer"><div class="${t.done?'chk on':'dt'}" ${t.done?'':'style="background:#DDF3F0;color:#1F8F8A"'}>${t.done?'✓':t.d+'<small>DIAS</small>'}</div><div><b>${esc(t.t)}</b><span class="sm">${t.done?'Concluído':'Vence em '+t.d+' dias'}</span></div>${!t.done&&t.d<=2?'<span class="badge r">Urgente</span>':''}</div>`).join('')}</div>
+<div class="card tip"><div style="width:84px;flex:none">${OCTO}</div><div style="flex:1"><div class="sec" style="margin:0">UMA DICA DA LEVI AI</div><h3 style="font-size:18px">Você pode economizar até ${R(save_)}</h3><p class="sm">Compare itens de decoração semelhantes com valores menores.</p></div><button class="fab" style="background:#fff;color:var(--deep);border-radius:50%;flex:none;font-size:18px" onclick="go('ai')" aria-label="Abrir Levi AI">›</button></div>`}
+function tTask(id){const t=S.tasks.find(x=>x.id===id);t.done=!t.done;save();render();if(t.done){confetti();toast('Tarefa concluída! 🎉')}}
+function plan(){const sub=S.sub;let h=`<div class="card" style="display:flex;align-items:center;background:linear-gradient(135deg,#E3F6F2,#EDF8F8)"><div style="flex:1"><div class="sec" style="margin:0">TUDO EM SEU LUGAR</div><h1 style="font-size:28px">Planejamento</h1><p class="sm">Organize compras, receitas e entregas sem perder nenhum detalhe.</p></div><div style="width:120px">${TURTLE}</div></div>
+<div class="tabs" role="tablist">${[['compras','🛒 Compras'],['receitas','🍰 Receitas'],['entregas','🚚 Entregas']].map(t=>`<button role="tab" class="${sub===t[0]?'on':''}" onclick="S.sub='${t[0]}';save();render()">${t[1]}</button>`).join('')}</div>`;
+if(sub==='compras'){const q=S.q.toLowerCase(),L=S.items.filter(i=>(S.cat==='Todos'||i.cat===S.cat)&&i.name.toLowerCase().includes(q));
+h+=`<div class="srch"><input class="inp" placeholder="Buscar itens..." aria-label="Buscar itens" value="${esc(S.q)}" oninput="S.q=this.value;list()"><button class="fab" onclick="newItem()" aria-label="Novo item">＋</button></div><div class="chips">${['Todos',...CATS].map(c=>`<button class="chip ${S.cat===c?'on':''}" onclick="S.cat='${c}';render()">${c}</button>`).join('')}</div><div class="card" id="lst"></div>`}
+else if(sub==='receitas')h+=S.recipes.map((r,i)=>`<div class="card rec"><div class="top"><span>${r.tag}</span>${r.e}</div><div class="bd"><h3 style="font-size:19px">${esc(r.n)}</h3><p class="sm">${r.yield} · ${r.ing.length} ingredientes</p><div style="display:flex;justify-content:space-between;align-items:center;margin-top:4px"><b style="font-size:17px">${R(recCost(r))}</b><button style="color:var(--tq);font-weight:700" onclick="this.closest('.rec').querySelector('.ings').classList.toggle('open');this.textContent=this.textContent.startsWith('Ver')?'Ocultar ingredientes ›':'Ver ingredientes ›'">Ver ingredientes ›</button></div><div class="ings"><div>${r.ing.map(g=>`<div class="row" style="padding:8px 0"><div style="flex:1">${esc(g[0])}</div><span class="sm">${g[1]}</span><b style="width:70px;text-align:right">${R(g[2])}</b></div>`).join('')}<p class="sm" style="margin-top:8px">Por porção: ${R(recCost(r)/parseInt(r.yield))}</p></div></div></div></div>`).join('')+`<button class="card" style="width:100%;border:2px dashed var(--ln);box-shadow:none;background:transparent;color:var(--mut)" onclick="toast('Cadastro de receita: próxima versão 🐙')"><b style="display:block;color:var(--ink)">＋ Nova receita</b>Calcule custos e ingredientes</button>`;
+else{const D=['Aguardando envio','Enviado','Em trânsito','Saiu para entrega','Entregue'];h+=S.deliv.map(d=>{const late=d.st<4&&d.eta<day(0);return`<div class="card" ${late?'style="border:1.5px solid #F7C9C1"':''}><div style="display:flex;justify-content:space-between;gap:8px"><div><b style="font-size:16px">${esc(d.n)}</b><div class="sm">${esc(d.s)}</div></div><span class="badge ${late?'r':d.st===4?'':'y'}">${late?'Atrasado':D[d.st]}</span></div><div class="tl" style="margin-top:14px">${D.map((x,i)=>`<div class="${i>d.st?'w':''}"><b>${x}</b></div>`).join('')}</div><p class="sm">Previsto para ${new Date(d.eta+'T12:00').toLocaleDateString('pt-BR',{day:'2-digit',month:'short'})} · Frete ${R(d.frete)}</p></div>`}).join('')}
+return h}
+function list(){const q=S.q.toLowerCase(),L=S.items.filter(i=>(S.cat==='Todos'||i.cat===S.cat)&&i.name.toLowerCase().includes(q));
+$('#lst').innerHTML=`<div class="sm" style="display:flex;justify-content:space-between"><b>${S.cat==='Todos'?'Todos os itens':S.cat}</b><span>${L.length} itens · ${R(L.reduce((s,i)=>s+i.price,0))}</span></div>`+(L.length?L.map(i=>`<div class="row"><button class="chk ${paidSt.includes(i.status)?'on':''}" onclick="tItem('${i.id}')" aria-label="Marcar como comprado">${paidSt.includes(i.status)?'✓':''}</button><div><b>${esc(i.name)}</b><span class="sm">${CI[i.cat]||''} ${i.cat} · ${i.qty} ${i.unit.toLowerCase()} · ${STN[i.status]}</span></div><b>${i.price?R(i.price):'—'}</b></div>`).join(''):emptyS('Nada por aqui ainda','Adicione o primeiro item da festa.'))}
+function tItem(id){const i=S.items.find(x=>x.id===id);i.status=paidSt.includes(i.status)?'aguardando':'comprado';save();list();if(i.status==='comprado'){confetti();toast('Item comprado! 🫧')}}
+const GUESS=[[/copo|prato|talher|guardanapo|mesa|cadeira|bandeja/i,'Estrutura','Unidade'],[/bolo|salgad|doce|brigadeiro|beijinho|refri|suco|[áa]gua|gelo/i,'Alimentação','Unidade'],[/bal[ãa]o|painel|flor|enfeite|toalha|lembran/i,'Decoração','Unidade'],[/fot[óo]grafo|buffet|gar[çc]om|som|recrea/i,'Serviços','Serviço'],[/refri|suco|leite/i,'Alimentação','Litro']];
+function newItem(){const m=modal(`<div class="sec" style="margin:0">CADASTRO RÁPIDO</div><h2 style="margin-bottom:12px">Novo item</h2><div class="card tip" style="padding:10px;box-shadow:none;background:#E3F6F2">✨ <span class="sm">Digite "100 copos descartáveis" e sugerimos o restante.</span></div><label>Nome do item</label><input id="fn" class="inp" placeholder="Ex.: 100 copos descartáveis"><label>Categoria</label><select id="fc" class="inp"><option value="">Selecione</option>${CATS.map(c=>`<option>${c}</option>`).join('')}</select><label>Quantidade</label><input id="fq" class="inp" type="number" min="1" value="1"><label>Unidade</label><select id="fu" class="inp">${UNITS.map(c=>`<option>${c}</option>`).join('')}</select><label>Valor estimado (opcional)</label><input id="fp" class="inp" type="number" min="0" step="0.01" placeholder="R$ 0,00"><div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn s" onclick="closeM()">Cancelar</button><button class="btn" onclick="saveItem()">✓ Salvar item</button></div>`);
+$('#fn').oninput=e=>{const mm=e.target.value.match(/^(\d+)\s+(.+)/);if(mm)$('#fq').value=mm[1];const t=mm?mm[2]:e.target.value,g=GUESS.find(x=>x[0].test(t));if(g){$('#fc').value=g[1];$('#fu').value=g[2]}}}
+function saveItem(){let n=$('#fn').value.trim();if(!n){toast('Digite o nome do item');return}const m=n.match(/^(\d+)\s+(.+)/);S.items.unshift({id:uid(),name:n,cat:$('#fc').value||'Outros',qty:+$('#fq').value||1,unit:$('#fu').value,price:+$('#fp').value||0,status:'naopesq'});save();closeM();confetti();toast('Item salvo! 🐚');S.tab==='plan'?render():go('plan')}
+function budget(){const s=stats(),by=CATS.map(c=>[c,S.items.filter(i=>i.cat===c&&i.status!=='cancelado').reduce((a,i)=>a+i.price,0)+(c==='Alimentação'?s.rc:0)]).filter(x=>x[1]).sort((a,b)=>b[1]-a[1]),mx=by[0]?by[0][1]:1,avail=S.budget-s.plan,used=Math.min(100,s.plan/S.budget*100),C=2*Math.PI*40;
+return`<div class="card bl"><div style="display:flex;align-items:center;gap:14px"><div style="flex:1"><div class="sm" style="color:#cfe">Orçamento disponível</div><div class="n" style="font-size:34px" data-n="${avail}" data-m="r"></div><div class="sm" style="color:#cfe">de ${R(S.budget)} planejados</div><div class="bar" style="margin-top:12px"><b data-w="${used}"></b></div><small>${Math.round(used)}% do orçamento comprometido</small></div><svg class="donut" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" stroke="#ffffff33"/><circle cx="50" cy="50" r="40" stroke="#B5E5D6" stroke-linecap="round" transform="rotate(-90 50 50)" stroke-dasharray="${C*s.paid/S.budget} ${C}"/><text x="50" y="52" text-anchor="middle" fill="#fff" font-weight="800" font-size="19">${Math.round(s.paid/S.budget*100)}%</text><text x="50" y="66" text-anchor="middle" fill="#cfe" font-size="9">já pago</text></svg></div></div>
+${avail<0?'<div class="card" style="background:#FDE5E1">⚠️ <b>Atenção:</b> o planejado passou do orçamento em '+R(-avail)+'.</div>':used>85?'<div class="card" style="background:#FBF0D3">⚠️ Mais de 85% do orçamento já está comprometido.</div>':''}
+<div class="grid">${[['Total estimado',s.plan],['Efetivamente pago',s.paid],['Total pendente',s.plan-s.paid],['Fretes',s.fr]].map(x=>`<div class="card"><div class="sm">${x[0]}</div><div class="n" data-n="${x[1]}" data-m="r"></div></div>`).join('')}</div>
+<div class="card"><div class="sec" style="margin:0">DISTRIBUIÇÃO</div><h2 style="margin-bottom:10px">Gastos por categoria</h2>${by.map(c=>`<div style="margin:12px 0"><div style="display:flex;justify-content:space-between"><span>${CI[c[0]]} ${c[0]}</span><b>${R(c[1])}</b></div><div class="bar d" style="margin-top:5px"><b data-w="${c[1]/mx*100}"></b></div></div>`).join('')}<p class="sm">Alimentação inclui o custo das receitas, sem duplicar ingredientes.</p></div>`}
+function guests(){const s=stats(),f=S.gf||'t',L=S.guests.filter(g=>f==='t'||g.st===f),ST={c:['Confirmado',''],p:['Pendente','y'],n:['Não irá','r']},groups=[...new Set(L.map(g=>g.group))];
+return`<div class="sec" style="margin:0">PESSOAS ESPECIAIS</div><div style="display:flex;justify-content:space-between;align-items:center"><div><h1 style="font-size:30px">Convidados</h1><p class="sm">Todo mundo que vai celebrar a chegada do Levi com vocês.</p></div><button class="fab" onclick="newGuest()" aria-label="Novo convidado">＋</button></div>
+<div class="grid" style="margin-top:14px"><div class="card bl" style="grid-column:1/-1"><span class="sm" style="color:#cfe">Total de pessoas</span><div class="n" style="font-size:34px" data-n="${s.tot}"></div></div>${[['Confirmados',s.conf,'#5CCFA5'],['Pendentes',s.pend,'#EBB65A'],['Não irão',s.no,'#F3A69B']].map(x=>`<div class="card" style="padding:12px"><span class="sm"><span style="color:${x[2]}">●</span> ${x[0]}</span><div class="n" data-n="${x[1]}"></div></div>`).join('')}</div>
+<div class="chips">${[['t','Todos'],['c','Confirmado'],['p','Pendente'],['n','Não irá']].map(x=>`<button class="chip ${f===x[0]?'on':''}" onclick="S.gf='${x[0]}';render()">${x[1]}</button>`).join('')}</div>
+${groups.length?groups.map(g=>`<div class="card"><b class="sm">${esc(g)}</b>${L.filter(x=>x.group===g).map(x=>`<div class="row" onclick="cycG('${x.id}')" style="cursor:pointer"><div class="av" style="width:40px;height:40px;font-size:13px;background:${['#DDF3F0','#EDE8FA','#FDE5E1','#FBF0D3'][x.name.length%4]}">${esc(x.name.split(' ').map(w=>w[0]).slice(0,2).join(''))}</div><div><b>${esc(x.name)}</b><span class="sm">${x.comp?x.comp+' acompanhante'+(x.comp>1?'s':''):'Sem acompanhantes'}</span></div><span class="badge ${ST[x.st][1]}">${ST[x.st][0]}</span></div>`).join('')}</div>`).join(''):emptyS('Nenhum convidado aqui','Toque em ＋ para convidar alguém.')}<p class="sm" style="text-align:center">Toque em um convidado para alterar o status.</p>`}
+function cycG(id){const g=S.guests.find(x=>x.id===id);g.st={p:'c',c:'n',n:'p'}[g.st];save();render()}
+function newGuest(){modal(`<div class="sec" style="margin:0">CADASTRO RÁPIDO</div><h2 style="margin-bottom:12px">Novo convidado</h2><label>Nome do convidado</label><input id="gn" class="inp" placeholder="Ex.: Fernanda e família"><label>Telefone</label><input id="gt" class="inp" type="tel" placeholder="(00) 00000-0000"><label>Grupo ou família</label><input id="gg" class="inp" placeholder="Ex.: Família Silva"><label>Acompanhantes</label><input id="ga" class="inp" type="number" min="0" value="0"><div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn s" onclick="closeM()">Cancelar</button><button class="btn" onclick="saveGuest()">✓ Salvar convidado</button></div>`)}
+function saveGuest(){const n=$('#gn').value.trim();if(!n){toast('Digite o nome do convidado');return}S.guests.unshift({id:uid(),name:n,phone:$('#gt').value,group:$('#gg').value.trim()||'Sem grupo',comp:+$('#ga').value||0,st:'p'});save();closeM();confetti();toast('Convidado adicionado! 🐠');S.tab==='guests'?render():go('guests')}
+/* ---------- Levi AI ---------- */
+const SUG=['Quantos salgados para 60 pessoas?','Como economizar na decoração?','O que ainda falta comprar?'];
+function ai(){return`<div class="card" style="display:flex;gap:12px;align-items:center;padding:12px"><div style="width:48px;background:#EDE8FA;border-radius:14px;padding:4px">${OCTO}</div><div><b>Levi AI</b><div class="sm">● Pronto para ajudar</div></div></div><div class="sec" style="margin:0 0 8px">EXPERIMENTE PERGUNTAR</div><div class="chips">${SUG.map(s=>`<button class="chip" onclick="ask(this.textContent)">${s}</button>`).join('')}</div><div class="chat" id="chat">${S.chat.map(msgH).join('')}</div><form class="cbar" onsubmit="event.preventDefault();ask($('#ci').value)"><input id="ci" class="inp" placeholder="Pergunte qualquer coisa sobre a festa..." aria-label="Mensagem" autocomplete="off"><button class="fab" style="background:var(--tq)" aria-label="Enviar">➤</button></form>`}
+const msgH=m=>m.items?.length?`<div class="ac"><b>Sugestão de itens</b>${m.items.map(i=>`<div class="sm">• ${esc(i.qty||1)} ${esc(i.unit||'un.')} — ${esc(i.name)}${i.price?' ('+R(i.price)+')':''}</div>`).join('')}<div style="display:flex;gap:8px;margin-top:10px"><button class="btn" style="padding:8px 14px" onclick="addAi('${m.id}')">Adicionar ${m.items.length} itens</button><button class="btn s" style="padding:8px 14px" onclick="this.closest('.ac').remove()">Agora não</button></div></div>`:`<div class="msg ${m.r==='u'?'u':''}">${esc(m.t)}</div>`;
+async function ask(q){q=(q||'').trim();if(!q)return;S.chat.push({r:'u',t:q});S.chat.push({r:'a',t:'🫧 Pensando...',tmp:1});render();let a;
+try{const r=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,context:{orcamento:S.budget,planejado:stats().plan,pago:stats().paid,convidados:stats().tot,itens:S.items.map(i=>({n:i.name,c:i.cat,s:i.status,p:i.price}))}})});if(!r.ok)throw 0;a=await r.json()}catch{a=demo(q)}
+S.chat=S.chat.filter(m=>!m.tmp);S.chat.push({r:'a',t:a.reply});if(a.items?.length)S.chat.push({r:'a',id:uid(),items:a.items});S.chat=S.chat.slice(-30);save();render()}
+function demo(q){const n=(q.match(/\d+/)||[60])[0];if(/salgad/i.test(q))return{reply:`Modo demonstração (configure a GEMINI_API_KEY para respostas reais).\nPara ${n} convidados, calculo cerca de 8 salgados por pessoa: ${n*8} unidades (~${Math.ceil(n*8/100)} cento${n*8>100?'s':''}). Premissa: festa de 3 horas com doces e bolo também.`,items:[{name:'Salgados variados',cat:'Alimentação',qty:n*8,unit:'Unidade',price:Math.round(n*8*.55)}]};
+if(/falta/i.test(q)){const p=S.items.filter(i=>!paidSt.includes(i.status));return{reply:p.length?`Ainda faltam ${p.length} itens: ${p.slice(0,4).map(i=>i.name).join(', ')}. Resolva primeiro a decoração, que vence em 2 dias.`:'Tudo comprado! 🎉',items:[]}}
+if(/econom/i.test(q))return{reply:'Dicas: compare painéis em 3 lojas, alugue em vez de comprar mesas e faça os docinhos em casa. Isso costuma economizar de 10% a 15%.',items:[]};
+return{reply:'Estou em modo demonstração. Pergunte sobre salgados, economia ou o que falta comprar. Com a chave do Gemini configurada, respondo qualquer coisa!',items:[]}}
+function addAi(id){const m=S.chat.find(x=>x.id===id);m.items.forEach(i=>S.items.unshift({id:uid(),name:i.name,cat:CATS.includes(i.cat)?i.cat:'Outros',qty:+i.qty||1,unit:UNITS.includes(i.unit)?i.unit:'Unidade',price:+i.price||0,status:'naopesq'}));S.chat=S.chat.filter(x=>x!==m);S.chat.push({r:'a',t:'Pronto! Adicionei à sua lista de compras. 🐙'});save();confetti();render()}
+/* ---------- Início ---------- */
+const B=$('#bub');for(let i=0;i<14;i++){const e=document.createElement('i'),s=6+Math.random()*16;e.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${9+Math.random()*12}s;animation-delay:-${Math.random()*15}s`;B.appendChild(e)}
+$('#spt').innerHTML=TURTLE;
+setTimeout(()=>$('#splash').classList.add('out'),reduce?300:1900);setTimeout(()=>$('#splash').remove(),2800);
+render();
+if('serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}));
+</script>
+</body>
+</html>
