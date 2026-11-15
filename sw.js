@@ -1,4 +1,4 @@
-const C='levi-v2',A=['/','/manifest.webmanifest','/icons/icon-192.jpg','/icons/octopus-home.png'];
+const C='levi-v3',A=['/','/manifest.webmanifest','/icons/icon-192.jpg','/icons/octopus-home.png','/icons/octopus-invite.png','/icons/octopus-budget.png','/icons/octopus-planner.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(A)));self.skipWaiting()});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C).map(x=>caches.delete(x))))));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.pathname.startsWith('/api/'))return;
